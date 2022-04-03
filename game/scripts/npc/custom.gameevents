@@ -1,0 +1,7 @@
+"CustomEvents"
+{
+	"on_global_value_changed"
+	{
+		"name" "string"
+	}
+}

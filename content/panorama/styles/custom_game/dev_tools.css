@@ -1,0 +1,170 @@
+.DevTools {
+	width: 100%;
+	height: 100%;
+}
+
+#DevPanelRoot {
+	width: 140px;
+	height: 48px;
+	margin-top: 110px;
+	box-shadow: #3b3b3b80 0px 0px 20px 0px;
+	padding: 10px;
+	border-radius: 0px 5px 5px 0px;
+	background-color: #242424;
+	transition-property: width, height;
+	transition-duration: 0.25s;
+	transition-timing-function: ease-out;
+	flow-children: down;
+}
+
+#DevPanelRoot.active {
+	width: 300px;
+	height: 700px;
+}
+
+#DevPanelRoot:not(.active) {
+	padding-bottom: 0px;
+}
+
+Label {
+	vertical-align: center;
+	horizontal-align: center;
+	color: white;
+	font-size: 23px;
+	font-family: Radiant;
+	text-shadow: 2px 2px 8px 3 #333333b0;
+}
+
+#DevPanelClose {
+	height: 30px;
+	width: 120px;
+	background-color: #555555;
+	horizontal-align: right;
+	margin-bottom: 10px;
+	transition: background-color 0.2s ease-in 0s;
+	border-radius: 5px;
+}
+
+#DevPanelClose:hover {
+	background-color: #797979;
+}
+
+#DevPanelInner {
+	height: 100%;
+	width: 100%;
+	box-shadow: inset #3b3b3b80 0px 0px 20px 0px;
+	border-radius: 10px;
+}
+
+#DevPanelBG {
+	height: 100%;
+	width: 100%;
+	wash-color: #414141ef;
+	background-image: url("file://{images}/custom_game/hud/general/hud_bg_white.jpg");
+}
+
+#DevPanelButtonList {
+	height: 100%;
+	width: 100%;
+	flow-children: down;
+	padding: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	overflow: scroll;
+}
+
+#DevPanelButtonList #VerticalScrollBar {
+	width: 0;
+}
+
+#DevPanelButtonList #HorizontalScrollBar {
+	height: 0;
+}
+
+.InnerButton {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: #1f1f1f;
+	height: 40px;
+	width: 250px;
+	border-radius: 5px;
+	border: 2px solid rgb(155, 155, 155);
+	color: white;
+	transition: background-color 0.2s ease-in 0s;
+}
+
+.InnerButton:hover {
+	background-color: #414141;
+}
+
+.InnerButton Label {
+	font-size: 20px;
+}
+
+.CombiField {
+	width: 250px;
+	flow-children: right;
+}
+
+.CombiField .InnerButton {
+	width: 60%;
+	margin-right: 5%;
+}
+
+.CombiField NumberEntry {
+	width: 35%;
+	margin-top: 6px;
+}
+
+.CombiField.WeaponField .InnerButton {
+	width: 80%;
+}
+
+.CombiField.MultiLineField {
+	flow-children: down;
+	height: 80px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.MultiLineField .MultiLineTop {
+	width: 100%;
+	flow-children: right;
+}
+
+.MultiLineField .SliderValueContainer {
+	horizontal-align: right;
+	flow-children: right;
+}
+
+.MultiLineField .MultiLineTitle {
+	font-size: 20px;
+}
+
+.MultiLineField .SliderValue {
+	width: 60px;
+}
+
+.MultiLineField .SliderValueUnit {
+	width: 30px;
+	horizontal-align: right;
+	font-size: 20px;
+	color: rgb(224, 224, 224);
+	margin-left: 5px;
+}
+
+.MultiLineField .HorizontalSlider {
+	margin-top: 5px;
+}
+
+.MultiLineField .HorizontalSlider .SliderNotch {
+	height: 6px;
+	width: 10px;
+}
+
+.MultiLineField .HorizontalSlider #SliderThumb {
+	height: 25px;
+	width: 13px;
+	margin-top: 1px;
+	border-radius: 20%;
+}

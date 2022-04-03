@@ -1,0 +1,45 @@
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/util.js" />
+		<include src="file://{resources}/scripts/custom_game/dev_tools.js" />
+	</scripts>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/dev_tools.css" />
+	</styles>
+
+	<Panel hittest="false" class="DevTools">
+		<Panel id="DevPanelRoot">
+			<Button id="DevPanelClose" onactivate="OnDevClose()">
+				<Label id="DevPanelCloseLabel" class="ButtonLabel" text="#dev_title" />
+			</Button>
+			<Panel id="DevPanelInner">
+				<Panel id="DevPanelBG"/>
+				<Panel id="DevPanelButtonList">
+					<!-- Normal Button -->
+					<Button class="InnerButton" onactivate="Dev_Activity()">
+						<Label text="#dev_activate" />
+					</Button>
+					<!-- Button with Input -->
+					<Panel class="CombiField">
+						<Button class="InnerButton" onactivate="Dev_AddGold()">
+							<Label text="#dev_add_gold" />
+						</Button>
+						<NumberEntry id="Dev_GoldCount" class="CombiInput" min="10" max="10000" increment="10" onmoveup="IncrementValue('Dev_GoldCount', 10)" onmovedown="DecrementValue('Dev_GoldCount', 10)"/>
+					</Panel>
+					<!-- Slider with Input -->
+					<Panel class="CombiField MultiLineField">
+						<Panel class="MultiLineTop">
+							<Label class="MultiLineTitle" text="#dev_delay" />
+							<Panel class="SliderValueContainer">
+								<TextEntry id="Dev_DelayValue" class="SliderValue HasInput" multiline="false" textmode="numeric" text="0" ontextentrychange="CheckSliderValue('Dev_Delay', 'value')" oninputsubmit="CheckSliderValue('Dev_Delay', 'slider')"/>
+								<Label class="SliderValueUnit" text="ms" />
+							</Panel>
+						</Panel>
+						<SlottedSlider id="Dev_DelaySlider" class="HorizontalSlider" direction="horizontal" notches="10" min="0" max="1" onvaluechanged="CheckSliderValue('Dev_Delay', 'slider')"/>
+					</Panel>
+				</Panel>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

@@ -1,0 +1,12 @@
+"lang"
+{
+    "Language"    "english"
+    "Tokens"
+    {	
+		"dev_title"        "Dev Tools"
+        "dev_close"        "Close"
+        "dev_activate"     "Example Event"
+        "dev_add_gold"     "Add gold"
+        "dev_delay"        "Event Delay:"
+	}
+}
